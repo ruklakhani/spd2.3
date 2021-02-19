@@ -13,14 +13,17 @@ _Example: I noticed that the program should show pizza orders once a new order i
 
 _Then I noticed another bug ..._
 
-## Exercise 1
+exercise 1:
+line 79 changed topping to topping_type
+the redirect in pizza_order_submit() put a '/' in the url_for() instead of home
+added db.session.commit() after db.session.add(pizza) so the pizza is saved to the db
+changed name and size to order_name and pizza_size on lines 67 and 68 to get the form values
 
-[[Your answer goes here!]]
+exercise 2:
+lines 39 and 40 were setting the wrong arg names, changed to units and city
+changed place to q for the api request
+changed result_json['main']['temperature'] to result_json['main']['temp'] so it would get the actual data from the api result
 
-## Exercise 2
-
-[[Your answer goes here!]]
-
-## Exercise 3
-
-[[Your answer goes here!]]
+exercise 3:
+in utils.py on line 37 right_side[i] went out of range, I changed the i to j to fix this.
+in utils.py on line 51 arr[mid] threw an error because mid was a float. Added a // to line 48 to make mid an integer
