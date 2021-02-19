@@ -56,7 +56,7 @@ class CarbonMonoxideDevice():
         self.display_unit = display_unit   
 
     def Display(self):
-        """."""
+        """Displays Carbon Monoxide Level."""
         msg = 'Carbon Monoxide Level is : ' + \
             str(self.carbonMonoxideSensor.get_carbon_monoxide_level())
         self.display_unit.display(msg)
