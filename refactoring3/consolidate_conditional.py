@@ -1,5 +1,7 @@
 # by Kami Bigdely
 # Consolidate conditional expressions
+SHIRAZI_SALAD_INGREDIENTS = ['cucumber', 'tomato', 'onion', 'lemon juice']
+
 def dice(ingredients):
     print("diced all ingredients.")
 def mix_all(diced_ingredients):
@@ -8,20 +10,16 @@ def add_salt():
     print('added salt.')
 def pour(liquid):
     print('poured', liquid + '.',)
+def has_required_ingredients(ingredients, required):
+    for item in required:
+        if item not in ingredients:
+            return False
+    return True
 
 def make_shirazi_salad(ingredients):
-    if 'cucumber' not in ingredients:
+    if not has_required_ingredients(ingredients, SHIRAZI_SALAD_INGREDIENTS):
         print('lacks ingredients.')
-        return
-    if 'tomato' not in ingredients:
-        print('lacks ingredients.')
-        return
-    if 'onion' not in ingredients:
-        print('lacks ingredients.')
-        return
-    if 'lemon juice' not in ingredients:
-        print('lacks ingredients.')
-        return
+        return 
     dice(ingredients)
     mix_all(ingredients)
     add_salt()
